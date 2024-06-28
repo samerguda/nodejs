@@ -190,9 +190,83 @@
   </div>
   <li>Use the <strong>exports</strong> keyword to make <strong>properties and methods</strong> available <strong>outside</strong> the module file.</li>
   <li>Save the code above in a file <mark>called "myfirstmodule.js"</mark> </li>
+  <li>Now you can include and <strong>use</strong>  the module in any of your <strong>Node.js files.</strong> </li>
+
+  <div class="w3-panel w3-card w3-light-grey"> 
+<h4>Use the <strong>module "myfirstmodule"</strong>  in <mark>a Node.js file:</mark></h4>
+  
+    <div class="w3-code htmlHigh notranslate">
+      var http = require('http');<br>
+      var dt = require('./myfirstmodule');<br><br>
+      
+      http.createServer(function (req, res) {<br>
+        res.writeHead(200, {'Content-Type': 'text/html'});<br>
+        res.write("The date and time are currently: " + dt.myDateTime());<br>
+        res.end();<br>
+      }).listen(8080);<br>
+    </div>
+  </div>
+
+  <li>we use <strong>./ </strong> to locate the  module,means that the<strong>module</strong>  is <mark>located in the same folder as the Node.js</mark> </li>
+  <li>Save the code above in a file called <strong>"demo_module.js"</strong> </li>
+  <li>initiate the file:</li>
+  <div class="w3-panel w3-card w3-light-grey">  
+    <h4>Initiate demo_module.js:</h4>
+        <div class="w3-code htmlHigh notranslate">
+          C:\Users\Your Folder>node demo_module.js
+          
+        
+        </div>
+      </div>
+
+      <li>you will see the results hers <a href="http://localhost:8080">http://localhost:8080</a></li>
+    
+
 </ol>
 
 
+<hr>
+<hr>
+<hr>
+<hr>
+
+<h2>4-HTTP Module</h2>
+
+<ol>
+  <li>Node.js has a <strong>built-in module</strong> called HTTP</li>
+  <li>allows Node.js to <strong><mark>transfer data</mark></strong> over the Hyper Text Transfer <strong>Protocol</strong>  </li>
+  <li>To <strong>include</strong> the HTTP module, use the  <strong>require() method:</strong></li>
+  <div class="w3-panel w3-card w3-light-grey">  
+    <h4>To include the HTTP module</h4>
+        <div class="w3-code htmlHigh notranslate">
+          var http = require("http");
+          
+        
+        </div>
+      </div>
+
+  <li>he HTTP module can <mark>create an HTTP server</mark> that <strong>listens to server ports</strong></li>
+  <li>gives a <strong>response</strong> back to the client.</li>
+  <li>Use the <mark>createServer() method</mark> to create an <strong>HTTP server</strong></li>
+
+  <div class="w3-panel w3-card w3-light-grey">  
+    <h4>TUse the createServer() method to create an HTTP server:</h4>
+        <div class="w3-code htmlHigh notranslate">
+          var http = require('http');<br><br>
+
+          //create a server object:<br>
+          http.createServer(function (req, res) {<br>
+            res.write('Hello World!'); //write a response to the client<br>
+            res.end(); //end the response<br>
+          }).listen(8080); //the server object listens on port 8080<br>
+          
+        
+        </div>
+      </div>
+
+  <li></li>
+  <li></li>
+</ol>
 
 
 
