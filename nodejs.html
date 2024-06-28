@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<title>React</title>
+<title>Node.js</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <body class="w3-container">
@@ -9,39 +9,6 @@
 <!-- ====================== -->
 
     <div class="w3-container ">
-<h2>AAAAAAA</h2>
-<p>React, sometimes referred to as a frontend JavaScript framework, is a JavaScript library created by Facebook.</p>
-
-</p>
-
-<hr>
-<hr>
-<h2>AAAAAAA</h2>
-<p>React creates a <strong>VIRTUAL DOM in memory </strong>.React creates a VIRTUAL DOM in memory.</p>
-
-
-<hr>
-<h2>AAAAAAA</h2>
-<ul>
-    <li>need <strong>npm</strong> which is included with Node.js.</li>
-</ul>
-
-<hr>
-<h2>AAAAAAA</h2>
-
-<div class="w3-panel w3-card w3-light-grey"> 
-  <h4>AAAAAAA</h4>
-
-    <div class="w3-code htmlHigh notranslate">
-      &lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>
-      &lt;head&gt; <br>
-      &lt;script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin&gt;&lt;/script&gt;<br>
-      &lt;script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin&gt;&lt;/script&gt;<br>
-      &lt;script src="src="https://unpkg.com/@babel/standalone/babel.min.js" crossorigin&gt;&lt;/script&gt;<br>
-      &lt;head&gt;<br><br>
-     
-    </div>
-  </div>
 
   
 <ol><h1>Nodejs: (ISMH FUN EUS)</h1>
@@ -100,6 +67,44 @@
    <li></li>
 </ol>
 
+<hr>
+<h4>What is a Node.js File?</h4>
+<ol>
+    <li>Node.js <strong>files</strong> contain <strong>tasks</strong> that will be executed on <strong>certain events</strong></li>
+    <li>A typical event is someone trying to access a port on the server</li>
+    <li>Node.js files <strong>must be initiated on the server before</strong>  having any effect</li>
+    <li>Node.js files have <mark>extension ".js"</mark></li>
+</ol>
+<hr>
+<hr>
+<hr>
+<hr>
+<h2>2-Starting</h2>
+<ol>
+    <li>Download Node.js</li>
+    <li>Node.js website has installation instructions </li>
+    <li><a href="https://nodejs.org/en">nodejs</a></li>
+    <li>Once you have downloaded and installed Node.js on your computer</li>
+    <li> let's try to display "Hello World" in a web browser.</li>
+    <li>Create a Node.js file named "myfirst.js"</li>
+    <li>add the following code:</li>
+
+</ol>
+
+
+<div class="w3-panel w3-card w3-light-grey"> 
+    <h4>myfirst.js</h4>
+  
+      <div class="w3-code htmlHigh notranslate">
+       var http = require('http');
+
+       http.creatServer(function(req, res)) {
+        res.writeHead(200, {'Content-Type': 'text/html'});
+        res.end('Hello World!');
+       }).listen(8080);
+       
+      </div>
+    </div>
 
 
 
