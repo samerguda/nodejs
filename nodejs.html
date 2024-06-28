@@ -141,11 +141,46 @@
         <li>If anyone tries to access your computer on <strong>port 8080,</strong> they will get a "Hello World!" message in <strong>return!</strong></li>
         <li>Start your internet browser, and type in the address: <strong> <a href="http://localhost:8080"></a>http://localhost:8080</strong> </li>
 
+        
     </ol>
 
+<hr>
+<hr>
+<hr>
+<hr>
+
+<h2>3-Modules</h2>
+<ol>
+  <li>Consider modules to be the <strong>same as JavaScript libraries.</strong></li>
+  <li>A <strong>set of functions</strong> you want to include in your application.</li>
+  <li>Node.js has a set of built-in modules , you can use without any further installation.</li>
+  <li>To include a module, use the <mark>require() function</mark> with the name of the module</li>
+
+  <div class="w3-panel w3-card w3-light-grey"> 
+
+  
+    <div class="w3-code htmlHigh notranslate">
+        var http = require('http');
+    </div>
+  </div>
 
 
+  <li>Now your application <strong>has access to the HTTP module</strong>and is <mark>able to create a server:</mark> </li>
+  <div class="w3-panel w3-card w3-light-grey"> 
 
+  
+    <div class="w3-code htmlHigh notranslate">
+        http.createServer(function (req, res) { <br>
+            res.writeHead(200, {'Content-Type': 'text/html'});<br>
+            res.end('Hello World!');<br>
+          }).listen(8080);<br>
+    </div>
+  </div>
+
+  <li></li>
+  <li></li>
+  <li></li>
+</ol>
 
 
 
