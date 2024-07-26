@@ -10,7 +10,7 @@
 
     <div class="w3-container ">
 
-  
+
 <ol><h1>Nodejs: (ISMH FUN EUS)</h1>
 <li><h2>Intro</h2></li>
 <li><h2>Starting</h2></li>
@@ -36,7 +36,7 @@
     <li>uses <strong>asynchronous</strong> programming!</li>
     <li>A common task for a web server can be to <strong>open a file</strong> on the server</li>
     <li>and return the <strong>content</strong> to the client.</li>
-    
+
 </ol>
 <hr>
 <h4>how <strong>PHP or ASP</strong>  handles a file request:</h4>
@@ -92,9 +92,9 @@
 </ol>
 
 
-<div class="w3-panel w3-card w3-light-grey"> 
+<div class="w3-panel w3-card w3-light-grey">
     <h4>myfirst.js</h4>
-  
+
       <div class="w3-code htmlHigh notranslate">
        var http = require('http');<br><br>
 
@@ -102,7 +102,7 @@
         res.writeHead(200, {'Content-Type': 'text/html'});<br>
         res.end('Hello World!');<br>
        }).listen(8080);<br>
-       
+
       </div>
     </div>
 
@@ -115,9 +115,9 @@
     <li><mark>Navigate to the folder</mark> that contains the file "myfirst.js",</li>
 
 </ol>
-<div class="w3-panel w3-card w3-light-grey"> 
+<div class="w3-panel w3-card w3-light-grey">
 
-  
+
       <div class="w3-code htmlHigh notranslate">
         C:\Users\folder namer>_
       </div>
@@ -129,9 +129,9 @@
 
     </ol>
 
-    <div class="w3-panel w3-card w3-light-grey"> 
+    <div class="w3-panel w3-card w3-light-grey">
 <h4>Initiate "myfirst.js":</h4>
-  
+
         <div class="w3-code htmlHigh notranslate">
           C:\Users\ode myfirst.js
         </div>
@@ -141,7 +141,7 @@
         <li>If anyone tries to access your computer on <strong>port 8080,</strong> they will get a "Hello World!" message in <strong>return!</strong></li>
         <li>Start your internet browser, and type in the address: <strong> <a href="http://localhost:8080"></a>http://localhost:8080</strong> </li>
 
-        
+
     </ol>
 
 <hr>
@@ -156,9 +156,9 @@
   <li>Node.js has a set of built-in modules , you can use without any further installation.</li>
   <li>To include a module, use the <mark>require() function</mark> with the name of the module</li>
 
-  <div class="w3-panel w3-card w3-light-grey"> 
+  <div class="w3-panel w3-card w3-light-grey">
 
-  
+
     <div class="w3-code htmlHigh notranslate">
         var http = require('http');
     </div>
@@ -166,9 +166,9 @@
 
 
   <li>Now your application <strong>has access to the HTTP module</strong>and is <mark>able to create a server:</mark> </li>
-  <div class="w3-panel w3-card w3-light-grey"> 
+  <div class="w3-panel w3-card w3-light-grey">
 
-  
+
     <div class="w3-code htmlHigh notranslate">
         http.createServer(function (req, res) { <br>
             res.writeHead(200, {'Content-Type': 'text/html'});<br>
@@ -179,7 +179,7 @@
 
   <li>You can <strong>create</strong> your own <strong>modules</strong>,and easily include them in your <strong>applications.</strong></li>
 
-  <div class="w3-panel w3-card w3-light-grey"> 
+  <div class="w3-panel w3-card w3-light-grey">
 
   <h4>Create a module that <strong>returns</strong> the <mark>current date and time</mark></h4>
     <div class="w3-code htmlHigh notranslate">
@@ -192,13 +192,13 @@
   <li>Save the code above in a file <mark>called "myfirstmodule.js"</mark> </li>
   <li>Now you can include and <strong>use</strong>  the module in any of your <strong>Node.js files.</strong> </li>
 
-  <div class="w3-panel w3-card w3-light-grey"> 
+  <div class="w3-panel w3-card w3-light-grey">
 <h4>Use the <strong>module "myfirstmodule"</strong>  in <mark>a Node.js file:</mark></h4>
-  
+
     <div class="w3-code htmlHigh notranslate">
       var http = require('http');<br>
       var dt = require('./myfirstmodule');<br><br>
-      
+
       http.createServer(function (req, res) {<br>
         res.writeHead(200, {'Content-Type': 'text/html'});<br>
         res.write("The date and time are currently: " + dt.myDateTime());<br>
@@ -210,17 +210,17 @@
   <li>we use <strong>./ </strong> to locate the  module,means that the<strong>module</strong>  is <mark>located in the same folder as the Node.js</mark> </li>
   <li>Save the code above in a file called <strong>"demo_module.js"</strong> </li>
   <li>initiate the file:</li>
-  <div class="w3-panel w3-card w3-light-grey">  
+  <div class="w3-panel w3-card w3-light-grey">
     <h4>Initiate demo_module.js:</h4>
         <div class="w3-code htmlHigh notranslate">
           C:\Users\Your Folder>node demo_module.js
-          
-        
+
+
         </div>
       </div>
 
       <li>you will see the results hers <a href="http://localhost:8080">http://localhost:8080</a></li>
-    
+
 
 </ol>
 
@@ -236,12 +236,12 @@
   <li>Node.js has a <strong>built-in module</strong> called HTTP</li>
   <li>allows Node.js to <strong><mark>transfer data</mark></strong> over the Hyper Text Transfer <strong>Protocol</strong>  </li>
   <li>To <strong>include</strong> the HTTP module, use the  <strong>require() method:</strong></li>
-  <div class="w3-panel w3-card w3-light-grey">  
+  <div class="w3-panel w3-card w3-light-grey">
     <h4>To include the HTTP module</h4>
         <div class="w3-code htmlHigh notranslate">
           var http = require("http");
-          
-        
+
+
         </div>
       </div>
 
@@ -249,7 +249,7 @@
   <li>gives a <strong>response</strong> back to the client.</li>
   <li>Use the <mark>createServer() method</mark> to create an <strong>HTTP server</strong></li>
 
-  <div class="w3-panel w3-card w3-light-grey">  
+  <div class="w3-panel w3-card w3-light-grey">
     <h4>TUse the createServer() method to create an HTTP server:</h4>
         <div class="w3-code htmlHigh notranslate">
           var http = require('http');<br><br>
@@ -259,8 +259,8 @@
             res.write('Hello World!'); //write a response to the client<br>
             res.end(); //end the response<br>
           }).listen(8080); //the server object listens on port 8080<br>
-          
-        
+
+
         </div>
       </div>
 
@@ -269,9 +269,136 @@
 </ol>
 
 
+<h2>5-File System Module</h2>
+<ol>
+  <li>The Node.js <strong>file system module</strong> allows you to <mark>work</mark>  with the <strong>file system on your computer</strong>.</li>
+  <li>To <strong>include the File System module</strong>, use the <mark>require() method:</mark>
+
+    <div class="w3-panel w3-card w3-light-grey">
+
+
+      <div class="w3-code htmlHigh notranslate">
+        var fs = require('fs');
+      </div>
+    </div>
+  </li>
+  <li>Common <strong>use</strong> for the File System module <strong>(CRUD)</strong>:
+<ol>
+  <li>Read files</li>
+  <li>Create files</li>
+  <li>Update files</li>
+  <li>Delete files</li>
+  <li>Rename files</li>
+</ol>
+
+
+  </li>
+  <li>Read Files:
+    <ol>
+      <li>The <mark><strong>fs.readFile()</strong> method</mark> is used to <mark>read files on your computer.</mark></li>
+      <li>Assume we have the following <strong>HTML file</strong> <mark>(demofile1.html)</mark> (located in the same folder as Node.js):
+
+
+        <div class="w3-panel w3-card w3-light-grey">
+
+
+          <div class="w3-code htmlHigh notranslate">
+            &lt;html&gt;<br>
+            &ltbody&gt;<br>
+            &lt;h1>My Header&lt;/h1&gt;<br>
+              &lt;p&gt;My paragraph.&lt;/p&gt; <br>
+              &lt;/body&gt; <br>
+             &lt;/html&gt;
 
 
 
+
+          </div>
+        </div>
+      </li>
+
+      <li><strong>Create a Node.js file</strong> that <mark>reads</mark> the HTML file, and <strong>return the content:</strong>
+
+
+        <div class="w3-panel w3-card w3-light-grey">
+
+
+          <div class="w3-code htmlHigh notranslate">
+            var http = require('http'); <br>
+            var fs = require('fs'); <br>
+            http.createServer(function (req, res) { <br>
+             <mark> fs.readFile('demofile1.html', function(err, data)</mark> { <br>
+                res.writeHead(200, {'Content-Type': 'text/html'}); <br>
+                res.write(data); <br>
+                return res.end(); <br>
+              }); <br>
+            }).listen(8080); <br>
+
+          </div>
+        </div>
+
+
+      </li>
+      <li><strong>Save the code </strong>above in a file called <mark>"demo_readfile.js"</mark> , and initiate the file:
+
+        <div class="w3-panel w3-card w3-light-grey">
+          <h4>Initiate demo_readfile.js:</h4>
+
+          <div class="w3-code htmlHigh notranslate">
+            C:\Users\Your Name>node demo_readfile.js
+
+          </div>
+        </div>
+
+
+
+
+      </li>
+      <li>If you have followed the same steps on your computer, you will see the same result as the example:<amrk>http://localhost:8080</amrk> </li>
+    </ol>
+  </li>
+
+  <li>Create Files</li>
+  <li>Update Files</li>
+  <li>Delete Files</li>
+  <li>Rename Files</li>
+  <li>Upload Files</li>
+</ol>
+
+
+
+<h2>6-URL Module</h2>
+
+<ol>
+  <li>The Built-in URL Module
+    <ol>
+      <li> The URL module <mark>splits up</mark> a <strong>web address</strong> into <u>readable</u> parts.</li>
+      <li>To <strong>include the URL module</strong>, use the <mark>require() method:</mark>
+
+        <div class="w3-panel w3-card w3-light-grey">
+          <h4> </h4>
+
+          <div class="w3-code htmlHigh notranslate">
+            var url = require('url');
+
+          </div>
+        </div>
+
+      </li>
+      <li></li>
+      <li></li>
+    </ol>
+  </li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+</ol>
+
+<h2>7-NPM</h2>
+<h2>8-Events  </h2>
+<h2>9-Uokiad Files</h2>
+<h2>10-Send an Email</h2>
 
 
 
