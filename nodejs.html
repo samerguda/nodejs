@@ -385,8 +385,41 @@
         </div>
 
       </li>
-      <li></li>
-      <li></li>
+      <li>Parse an address with the <strong>url.parse() method,</strong>  and it will <mark>return a URL object</mark> with each part of the address as properties
+
+
+
+        <div class="w3-panel w3-card w3-light-grey">
+          <h4>Split a web address into readable parts: </h4>
+
+          <div class="w3-code htmlHigh notranslate">
+            var url = require('url'); <br>
+            var adr = 'http://localhost:8080/default.htm?year=2017&month=february'; <br>
+            var q = url.parse(adr, true); <br><br>
+
+            console.log(q.host); //returns 'localhost:8080'<br>
+            console.log(q.pathname); //returns '/default.htm'<br>
+            console.log(q.search); //returns '?year=2017&month=february'<br><br>
+
+            var qdata = q.query; //returns an object: { year: 2017, month: 'february' }<br>
+            console.log(qdata.month); //returns 'february'<br>
+
+          </div>
+        </div>
+
+
+
+      </li>
+      <li>Node.js File Server
+        <ol>
+          <li>Now we know how <strong>to parse the query string,</strong></li>
+          <li>and in the previous chapter we learned how to make Node.js <u>behave as a file server.</u> </li>
+          <li>Let us combine the two, and <mark>serve the file requested by the client.</mark></li>
+          <li>Create <U>two html</U> files and save them in the same folder as your node.js files</li>
+          <li></li>
+          <li></li>
+        </ol>
+      </li>
     </ol>
   </li>
   <li></li>
