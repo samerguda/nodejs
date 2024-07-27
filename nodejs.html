@@ -429,8 +429,185 @@
 </ol>
 
 <h2>7-NPM</h2>
+<ol>
+    <li>NPM is a <strong>package manager </strong>for Node.js packages, or modules</li>
+    <li><mark><a href="www.npmjs.com">www.npmjs.com</a></mark> hosts thousands of free packages to download and use.</li>
+    <li>The NPM program is installed on your computer <strong>when you install Node.js</strong> </li>
+    <li>A package in Node.js contains <strong>all the files</strong> you need <strong>for a module.</strong></li>
+    <li>Modules are <strong>JavaScript libraries </strong> you can include in your project.</li>
+    <li>Download a Package
+        <ol>
+            <li>Open the command line</li>
+            <li>tell NPM to download the package you want.</li>
+            <li>for example : download a package called "upper-case":
+                <div class="w3-panel w3-card w3-light-grey">
+                    <h4> Download "upper-case": </h4>
+          
+                    <div class="w3-code htmlHigh notranslate">
+                        C:\Users\Your Name><mark>npm install upper-case</mark> <br>
+                     
+                    </div>
+                  </div>
+
+
+            </li>
+            <li>NPM creates a folder named "node_modules"</li>
+            <li> where the package will be placed.</li>
+           
+        </ol>
+    </li>
+    <li></li>
+</ol>
+
+
 <h2>8-Events  </h2>
-<h2>9-Uokiad Files</h2>
+<ol>
+    <li>Every <strong>action</strong>  on a computer is an event.</li>
+    <li>Like when a <strong>connection is made</strong> or a file is opened.</li>
+    <li>Node.js has a <strong>built-in module,</strong>  called "Events"</li>
+    <li>where you can <strong>create-, fire-, and listen <mark>(CFL)</mark></strong> create-, fire-, and listen for- your own events.</li>
+    <li>To include the built-in Events module <strong>use the require() method.</strong>  </li>
+    <li>all event properties and methods are an <mark>instance of an EventEmitter object.</mark> </li>
+    <li>to access these properties and methods, <strong>create an EventEmitter object:</strong> 
+
+        <div class="w3-panel w3-card w3-light-grey">
+            <h4>   </h4>
+  
+            <div class="w3-code htmlHigh notranslate">
+                var events = require('events');<br>
+                var eventEmitter = new events.EventEmitter();
+             
+            </div>
+          </div>
+
+
+
+    </li>
+    <li><h4>The EventEmitter Object:</h4>
+    <ol>
+        <li>You can assign <strong>event handlers</strong>  to your own events with <strong>the EventEmitter object.</strong> </li>
+      
+    </ol>
+    
+    </li>
+    
+<h2>9-Upload Files</h2>
+<ol>
+    <li>very good module for working with <strong>file uploads,</strong>  called <mark>"Formidable".</mark></li>
+    <li>The Formidable module <strong>can be downloaded</strong> and installed using NPM:
+    
+
+        <div class="w3-panel w3-card w3-light-grey">
+            <h4>   </h4>
+  
+            <div class="w3-code htmlHigh notranslate">
+                C:\Users\Your Name>npm install formidable
+             
+            </div>
+          </div>
+
+    
+    
+    </li>
+
+    <li>After you have downloaded the Formidable module, you can <strong>include the module in any application:</strong> 
+
+
+        <div class="w3-panel w3-card w3-light-grey">
+            <h4>   </h4>
+  
+            <div class="w3-code htmlHigh notranslate">
+                var formidable = require('formidable');
+             
+            </div>
+          </div>
+    </li>
+    <li><h4>Upload Files:</h4>
+    <ol>
+
+        <li>Now you are ready to make a <strong> web page in Node.js </strong>that lets the user <mark>upload files to your computer:</mark> 
+        
+        <ol>
+
+
+            <li>Step 1: Create an Upload Form
+
+
+                <ol>
+                    <li>Create a <strong>Node.js file</strong>  that <u>writes an HTML form,</u> with an upload field:
+                    
+                        <div class="w3-panel w3-card w3-light-grey">
+                            <h4>This code will produce an HTML form   </h4>
+                  
+                            <div class="w3-code htmlHigh notranslate">
+                                var http = require('http'); <br><br>
+
+                                http.createServer(function (req, res) {<br>
+                                  res.writeHead(200, {'Content-Type': 'text/html'});<br>
+                                  res.write('<form action="fileupload" method="post" enctype="multipart/form-data">');<br>
+                                  res.write('<input type="file" name="filetoupload"><br>');<br>
+                                  res.write('<input type="submit">');<br>
+                                  res.write('</form>');<br>
+                                  return res.end();<br>
+                                }).listen(8080);<br>
+                            </div>
+                          </div>
+                    
+                    
+                    </li>
+                    <li></li>
+                    <li></li>
+                </ol>
+            </li>
+            <li>
+                Step 2: Parse the Uploaded File
+                <ol>
+                    <li>Include the Formidable module</li>
+                    <li>to be able to parse the uploaded file once it reaches the server.</li>
+                    <li>When the file is uploaded and parsed,
+
+                               
+                        <div class="w3-panel w3-card w3-light-grey">
+                            <h4> The file will be uploaded, and placed on a temporary folder:  </h4>
+                  
+                            <div class="w3-code htmlHigh notranslate">
+                                var http = require('http');<br>
+                                var formidable = require('formidable');<br><br>
+                                
+                                http.createServer(function (req, res) {<br>
+                                  if (req.url == '/fileupload') {<br>
+                                    var form = new formidable.IncomingForm();<br>
+                                    form.parse(req, function (err, fields, files) {<br>
+                                      res.write('File uploaded');<br>
+                                      res.end();<br>
+                                    });<br>
+                                  } else {<br>
+                                    res.writeHead(200, {'Content-Type': 'text/html'});<br>
+                                    res.write('<form action="fileupload" method="post" enctype="multipart/form-data">');<br>
+                                    res.write('<input type="file" name="filetoupload"><br>');<br>
+                                    res.write('<input type="submit">');<br>
+                                    res.write('</form>');<br>
+                                    return res.end();<br>
+                                  }<br>
+                                }).listen(8080); <br><br>
+
+                               
+                            </div>
+                          </div>
+
+                    </li>
+                    <li></li>
+                </ol>
+            </li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ol></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ol></li>
+</ol>
 <h2>10-Send an Email</h2>
 
 
