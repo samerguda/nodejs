@@ -555,8 +555,7 @@
                     
                     
                     </li>
-                    <li></li>
-                    <li></li>
+                  
                 </ol>
             </li>
             <li>
@@ -642,17 +641,88 @@
                     </li>
                 </ol>
             </li>
-            <li></li>
-            <li></li>
+           
         </ol></li>
-        <li></li>
-        <li></li>
-        <li></li>
+        
     </ol></li>
 </ol>
 <h2>10-Send an Email</h2>
 
+<ol>
+    <li><mark>The Nodemailer module</mark> makes it easy to send emails from your computer.</li>
+    <li>The Nodemailer module can be downloaded and installed using npm:
 
+        <div class="w3-panel w3-card w3-light-grey">
+            <h4>   </h4>
+  
+            <div class="w3-code htmlHigh notranslate">
+                C:\Users\Your Name>npm install nodemailer
+             
+            </div>
+          </div>
+          After you have downloaded the Nodemailer module, you can include the module in any application:
+
+          <div class="w3-panel w3-card w3-light-grey">
+            <h4>   </h4>
+  
+            <div class="w3-code htmlHigh notranslate">
+                var nodemailer = require('nodemailer');
+             
+            </div>
+          </div>
+    </li>
+    <li>Send an Email
+        <ol>
+        <li>Now you are ready to send emails from your server.</li>
+        <li>Use the username and password from your selected email provider to send an email.</li>
+
+        <div class="w3-panel w3-card w3-light-grey">
+            <h4>   </h4>
+  
+            <div class="w3-code htmlHigh notranslate">
+                var nodemailer = require('nodemailer'); <br><br>
+
+                var transporter = nodemailer.createTransport({<br>
+                  service: 'gmail',<br>
+                  auth: {<br>
+                    user: 'youremail@gmail.com',<br>
+                    pass: 'yourpassword'<br>
+                  }<br>
+                });<br><br>
+                
+                var mailOptions = {<br>
+                  from: 'youremail@gmail.com',<br>
+                  to: 'myfriend@yahoo.com',<br>
+                  subject: 'Sending Email using Node.js',<br>
+                  text: 'That was easy!'<br>
+                };<br><br>
+                
+                transporter.sendMail(mailOptions, function(error, info){<br>
+                  if (error) {<br>
+                    console.log(error);<br>
+                  } else {<br>
+                    console.log('Email sent: ' + info.response);<br>
+                  }<br>
+                });<br>
+             
+            </div>
+
+
+
+
+
+        <li>Now your server is able to send emails.</li>
+     
+    </ol>
+    </li>
+    <li>Multiple Receivers
+
+
+
+        
+    </li>
+    <li></li>
+</ol>
 
 <script src="https://www.w3schools.com/lib/w3codecolor.js"></script>
 
